@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    background: #000 !important;
+    color: #fff;
+}
+
+.logo {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1em;
+    z-index: 2;
+}
+
+.logo a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 4px;
+    font-family: "formula Condensed";
+    line-height: 1.5;
+
+}
+
+.logo a:hover {
+    color: blueviolet;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Neue Montreal";
+    font-size: 12px;
+    padding: 1em 2em;
+}
+
+.nav a:hover {
+    color: blueviolet;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.nav a#main-event {
+
+    margin-left: 2em;
+    margin-right: 5em;
+    color: #fff
+}
+
+.nav.primary a {
+    color: rgb(110, 110, 110);
+}
+
+.nav.primary a:hover {
+    color: aqua;
+}
+
+.nav-items p {
+    color: white;
+    font-family: "Neue Montreal";
+    font-size: 12px;
+
+}
+
+.carousel {
+    position: absolute !important;
+    width: calc(93vw - 2em);
+    height: calc(94vw -2em);
+    margin: 0 auto !important;
+
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+#myCarousel {
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative !important;
+    height: 85vh !important;
+}
+
+.carousel-caption {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    padding: 2.5em;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 1s;
+    opacity: 0;
+}
+
+.carousel-caption::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* backdrop-filter: blur(20px) opacity(1); */
+    border-radius: 100%;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.carousel-caption.animate-in {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+video {
+
+    position: absolute;
+    width: 100%;
+    opacity: 0.5 !important;
+    filter: grayscale()
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.5;
+    margin: 0 !important;
+}
+
+.ion-icon {
+    position: relative;
+    top: 2px;
+}
+
+span {
+    padding: 0.1em;
+}
+
+.row:nth-child(2) {
+    justify-content: center;
+}
+
+.header {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    font-family: "Formula Condensed";
+    text-transform: uppercase;
+    letter-spacing: 1em;
+    font-size: 20px;
+}
+
+.header p {
+    font-size: 12px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute !important;
+    z-index: 2;
+}
+
+.carousel-control-prev {
+    width: 50px !important;
+}
+
+.carousel-control-next {
+    width: 50px !important;
+}
+
+
+@media (max-width:900px) {
+    .nav {
+        display: none !important;
+    }
+
+    .carousel {
+        width: 100%;
+        height: 100%;
+        top: 4em;
+        left: 0 !important;
+    }
+
+    #myCarousel {
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+    .carousel-control-prev {
+        left: 0 !important;
+    }
+
+    .carousel-control-next {
+        right: 0 !important;
+    }
+}
